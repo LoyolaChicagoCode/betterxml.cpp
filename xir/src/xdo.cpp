@@ -35,12 +35,17 @@ XIRDataObject::setBase64(const char *key, const char *value) {
   elements[key_string] = p;
 }
 
-char *getTypeString(int type) {
+//old code return char*
+//but in fact it is function const char *,
+//it will cause potential problem
+const 
+string getTypeString(int type) {
   if(type==BASE64) {
-    return "base64=";
+     return "base64=";
   } else if(type==VERBATIM) {
-    return "verbatim=";
+     return "verbatim=";
   }
+  return "";
 }
 
 void 

@@ -20,11 +20,12 @@
  *
  * ns not working on the singletons
 */
+#include <cstdio>
 #include <iostream>
-#include <expat.h>
 #include <string>
 #include <sstream>
 #include <utility>
+#include "expat.h"
 #include "xdo.h"
 #include "expat-wrapper.h"
 
@@ -107,6 +108,7 @@ XMLParser::Parse(FILE *file) {
     }
   } while (!done);
   endDocument();
+  return 0;
 }
 
 const char *
