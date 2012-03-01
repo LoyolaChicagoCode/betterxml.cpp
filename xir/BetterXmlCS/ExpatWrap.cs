@@ -488,7 +488,7 @@ namespace BetterXml
         {
             StringBuilder sb = new StringBuilder();
 
-            while (*str != NSSep && *str != NullChar)
+            while (*str != NullChar)
             {
                 sb.Append(*str);
                 str++;
@@ -513,7 +513,7 @@ namespace BetterXml
 
         private static KeyValuePair<string, string> GetNamespaceDataPair(string value)
         {
-            int loc = value.IndexOf(NSSep, 0); //character shouldn't be hardcoded in, NSSep
+            int loc = value.IndexOf(NSSep, 0); 
 
             if (loc > 0)
             {
