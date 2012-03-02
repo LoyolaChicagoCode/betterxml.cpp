@@ -443,15 +443,16 @@ namespace BetterXml
 
             StartDocument();
 
-            int read = 0;
+            int count = 0;
             int done = 0;
             do
             {
                 byte[] buf = new byte[BUFFERSIZE];
 
-                int count = stream.Read(buf, read, BUFFERSIZE);
-                read += count;
+                count = stream.Read(buf, 0, BUFFERSIZE);
+
                 done = count == BUFFERSIZE ? 0 : 1;
+
                 if (XMLParse(XmlParser, buf, count, done) == XMLStatus.ERROR)
                 {
                     Console.Error.WriteLine("Error!");
