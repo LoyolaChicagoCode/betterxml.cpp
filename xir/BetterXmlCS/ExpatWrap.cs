@@ -489,7 +489,7 @@ namespace BetterXml
         {
             StringBuilder sb = new StringBuilder();
 
-            while (*str != NullChar)
+            while (str != null && *str != NullChar)
             {
                 sb.Append(*str);
                 str++;

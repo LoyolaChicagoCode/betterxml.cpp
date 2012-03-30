@@ -35,7 +35,7 @@ namespace BetterXml
             }
 
 #if DEBUG
-            Console.ReadKey();
+          //  Console.ReadKey();
 #endif
 
 
